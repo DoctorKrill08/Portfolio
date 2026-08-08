@@ -1,35 +1,44 @@
 'use client';
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import './globals.css';
+import Sidebar from './sidebar/sidebar';
+import Home from './home/home';
 
-export default function Home() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+function useIsMobile(): boolean {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleResize = (): void => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return isSmallScreen;
+}
+
+export default function Page() {
+  const mobile : boolean = useIsMobile();
+
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <div className={'sidebar ' + (sidebarOpen ? 'open' : '')}>
-            <div
-              className="hamburger"
-              onMouseDown={() => setSidebarOpen(!sidebarOpen)}
-            >
-              <img src={"/images/menu_burger.webp"}></img>
-            </div>
-            <button style={{borderTop:'1px solid white'}}> Home </button>
-            <button> About </button>
-            <button> Projects </button>
-            <button> Resume </button>
-            <button> Contact </button>
-          </div>
-
-
-          <h1 className="title">Ethan Kim</h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Aspiring Computer Science Major at UNC TBD
-          </p>
-        </div>
-
-      </main>
+    <div>
+        <Sidebar mobile={mobile} />
+        <Home mobile={mobile}/>
     </div>
   );
 }
