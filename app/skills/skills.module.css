@@ -1,0 +1,28 @@
+.skillBox {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skillIcon {
+    min-width: 100px;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 0 0 2px white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.skillIcon p{
+    font-size: 24px;
+}
+.skillIcon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px white;
+}

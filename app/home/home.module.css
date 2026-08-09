@@ -1,14 +1,13 @@
 .home {
-    background-color: black;
+    background-color: transparent;
     width: 100vw;
-    margin-top: 60px;
     display: grid;
     align-items: center;
     place-items: center;
     justify-content: center;
 }
 .home h1 {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
 }
 .home h2 {
@@ -35,22 +34,17 @@
     font-size: 24px;
     text-align: center;
 }
-.title {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 36px;
-    font-weight: bold;
-}
-
 .iconContainer{
     margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
+    align-items: top;
 }
-.icon {
+.icon{
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -66,50 +60,4 @@
 }
 .icon:hover{
     transform: scale(1.2);
-}
-
-.education{
-    text-align: center;
-    width: calc(90vw - 50px);
-}
-.educationContainer{
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-.educationItem {
-    border-radius: 10px;
-    border-width: 4px;
-    min-height: 400px;
-    max-width: 450px;
-    width: 80vw;
-    gap: 25px;
-    justify-content: center;
-    align-items: top;
-    transition: transform 0.3s ease-in-out;
-}
-.educationItem:hover {
-    transform: scale(1.02);
-}
-.educationItemContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: top;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.educationItem img {
-    width: 80%;
-    max-width: 200px;
-    height: 200px;
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-.educationItem img:hover{
-    transform: scale(1.1);
 }
