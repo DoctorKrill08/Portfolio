@@ -1,36 +1,17 @@
 import React from 'react'
 import { useState, useEffect} from "react";
 import skills from './skills.module.css';
-import { motion } from "motion/react"
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import FadeInWhenVisible from '../animations';
+
 
 export default function Skills() {
   const blue = 'rgba(70, 98, 255, 0.3)'
   const green = 'rgba(80, 255, 94, 0.3)'
   const yellow = 'rgba(255, 211, 45, 0.3)'
 
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-        transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
-      });
-    }
-    if (!inView) {
-      animation.start({
-        opacity: 0,
-        y: 20,
-        transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
-      });
-    }
-  }, [inView, animation])
 
   return (
-    <motion.div ref = {ref} className="bubble" initial={{ opacity: 0, y: 20 }} animate={animation}>
+    <FadeInWhenVisible className="bubble">
       <h1 style={{height: '70px', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>Skills</h1>
       <h2 style={{ marginTop: '20px', marginBottom: '10px', fontSize: '36px'}}>Languages</h2>
       <br/>
@@ -97,6 +78,6 @@ export default function Skills() {
           <p>YOLO</p>
         </div>
       </div>
-     </motion.div>
+     </FadeInWhenVisible>
   );
 }

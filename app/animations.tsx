@@ -1,26 +1,34 @@
-import { useState, useEffect} from "react";
-import { motion } from "motion/react"
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
 
-export default function Animation() {
-  const { ref, inView } = useInView();
+function FadeInWhenVisible({ className, children, ...props }) {
+  const { ref, inView } = useInView({
+    threshold: 0.2
+  });
   const animation = useAnimation();
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-        transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
-      });
-    }
-    if (!inView) {
-      animation.start({
-        opacity: 0,
-        y: 20,
-        transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
-      });
-    }
-  }, [inView, animation])
 
+  const x_initial = -120
+
+  useEffect(() => {
+    animation.start({
+      opacity: inView ? 1 : 0,
+      x: inView ? 0 : x_initial,
+      transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
+    });
+  }, [inView, animation]);
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, x: x_initial}}
+      animate={animation}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
 }
+
+export default FadeInWhenVisible;

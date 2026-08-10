@@ -1,10 +1,11 @@
 
 import { useState } from "react";
 import education from './education.module.css';
+import FadeInWhenVisible from '../animations';
 
 export default function Education() {
   return (
-      <div className="bubble">
+      <FadeInWhenVisible className="bubble">
         <h1 style={{ marginTop: '20px', marginBottom: '20px' }}>Education</h1>
         <div className={education.educationContainer}>
           <div className={education.educationItem} style={{backgroundColor: '#24688c', borderColor: '#1a2761', boxShadow: '0 0 4px #1a5761'}}>
@@ -25,6 +26,6 @@ export default function Education() {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInWhenVisible>
   );
 }
