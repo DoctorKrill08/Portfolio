@@ -1,6 +1,7 @@
 .skillBox {
-    width: 100%;
-    min-height: 200px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     align-items: top;
     justify-content: center;
@@ -10,7 +11,8 @@
 .skillIcon {
     min-width: 100px;
     height: 50px;
-    padding: 5px;
+    margin-bottom: 25px;
+    padding-right: 5px;
     box-shadow: 0 0 2px white;
     border-radius: 10px;
     align-items: center;
@@ -21,6 +23,10 @@
 }
 .skillIcon p{
     font-size: 24px;
+}
+.skillIcon img {
+    width: 40px;
+    height: 40px;
 }
 .skillIcon:hover {
     transform: scale(1.1);

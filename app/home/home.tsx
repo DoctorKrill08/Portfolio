@@ -1,9 +1,8 @@
-
+import React from 'react'
 import { useState } from "react";
 import home from './home.module.css';
 import Education from '../education/education';
 import Skills from '../skills/skills';
-
 
 
 export default function Home({ mobile = false }: { mobile?: boolean }) {
@@ -12,6 +11,7 @@ export default function Home({ mobile = false }: { mobile?: boolean }) {
   }
   return (
     <div className={home.home}>
+      <div className={'bubble'}>
       <h1>Ethan Kim</h1>
       <div className={home.profile}>
         <img src={'/images/profile.webp'} alt="profile" />
@@ -25,6 +25,7 @@ export default function Home({ mobile = false }: { mobile?: boolean }) {
       <p style={{fontSize: '24px', textAlign: 'center', marginLeft: '10px', marginRight: '10px'}}>
         Hello! I am an aspiring Computer Science Major at UNC Chapel Hill. I have been developing software for over 5 years now, please take a look below to see my education, skills, experience, and projects.
       </p>
+      </div>
       <Education />
       <Skills />
     </div>

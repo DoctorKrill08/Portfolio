@@ -1,4 +1,5 @@
 .home {
+    margin-top: 20px;
     background-color: transparent;
     width: 100vw;
     display: grid;
@@ -8,7 +9,6 @@
 }
 .home h1 {
     font-size: 42px;
-    font-weight: bold;
 }
 .home h2 {
     font-size: 24px;
@@ -25,6 +25,7 @@
 .profile img {
     width: 100%;
     height: 100%;
+    text-align: center;
     pointer-events: none;
     border-radius: 50%;
     object-fit: cover
