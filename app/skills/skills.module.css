@@ -11,8 +11,8 @@
 .skillIcon {
     min-width: 100px;
     height: 50px;
-    margin-bottom: 25px;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
     box-shadow: 0 0 2px white;
     border-radius: 10px;
     align-items: center;
@@ -25,10 +25,22 @@
     font-size: 24px;
 }
 .skillIcon img {
+    margin-right: 5px;
     width: 40px;
     height: 40px;
 }
 .skillIcon:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px white;
+}
+.projectSkills{
+    margin-bottom: 20px;
+}
+.projectSkillTitle{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
