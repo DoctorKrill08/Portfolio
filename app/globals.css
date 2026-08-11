@@ -26,7 +26,7 @@ body {
 .bubble {
     margin-top: 20px;
     width: 90vw;
-    min-height: 80vh;
+    min-height: 50vh;
     margin-left: 10px;
     margin-right: 10px;
     display: grid;

@@ -28,7 +28,7 @@ export default function Skills({mobile = false }) {
   projects[UFG] = {
       [NAME]: 'UFG',
       [LINK]: link + 'ufg',
-      [DESCRIPTION]: '2022 to Present\nMy very first project! A roblox multiplayer fighting game where players fight eachother as various Undertale characters. This game achieved over 6 million visits and over 2 millio unique users.',
+      [DESCRIPTION]: 'March of 2022 to Present\nMy very first project! A roblox multiplayer fighting game where players fight eachother as various Undertale characters. This game achieved over 6 million visits and over 2 million unique users.',
       [TITLE]: 'Undertale Fighting Game',
       [IMAGE]: '/images/UFGIcon.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -42,7 +42,7 @@ export default function Skills({mobile = false }) {
   projects[SOAR] = {
       [NAME]: 'SOAR',
       [LINK]: link + 'soar',
-      [DESCRIPTION]: '2024 to 2025/nMy first robot! SOAR was a FIRST Tech Challenge Robot for the INTO THE DEEP Season. With the software I developed, this robot achieved the #1 Autonomous Offensive Power Rating in the State',
+      [DESCRIPTION]: ' December of 2024 to August of 2025\nMy first robot! SOAR was a FIRST Tech Challenge Robot for the INTO THE DEEP Season built by team #10195 Night Owls. With the software I developed, this robot achieved the #1 Autonomous Offensive Power Rating in the State',
       [TITLE]: 'SOAR',
       [IMAGE]: '/images/SOAR.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -68,7 +68,7 @@ export default function Skills({mobile = false }) {
   projects[FURY] = {
       [NAME]: 'FURY',
       [LINK]: link + 'fury',
-      [DESCRIPTION]: '2025 to 2026\nFURY was a FIRST Tech Challenge Robot for the DECODE Season. This robot won ours teams very first competition since 2017 with impressive software feats like shooting while moving and rapid fire capabilities.',
+      [DESCRIPTION]: 'January of 2025 to June of 2026\nFURY was a FIRST Tech Challenge Robot for the DECODE Season built by team #10195 Night Owls. This robot won our teams very first competition since 2017 with impressive software feats like shooting while moving and rapid fire capabilities due to the software I developed.',
       [TITLE]: 'FURY',
       [IMAGE]: '/images/FURY.webp',
     [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -200,17 +200,16 @@ export default function Skills({mobile = false }) {
       <h1 style={{ height: '70px', borderBottom: '1px solid rgba(255, 255, 255, 0.7)', marginBottom: '20px', marginTop: '10px'}}>Projects</h1>
       <div className={styles.projectsContainer}>
         {projects.map((project, index) => (
-          <a key={index}  href={project[LINK]}>
-            <div className={styles.projectBubble}>
-              <h2>{project[TITLE]}</h2>
-              <div className={styles.project}>
-                <img src={project[IMAGE]} alt={project[TITLE]} />
+          <div key={index} className={styles.projectBubble}>
+            <h2>{project[TITLE]}</h2>
+            <div className={styles.project}>
+              <a className={styles.projectLearnMore} href={project[LINK]}><img src={project[IMAGE]} alt={project[TITLE]}/></a>
 
-              </div>
-              <p style={{marginBottom : '30px'}}>{project[DESCRIPTION]}</p>
-              {project[SKILLS]}
             </div>
-          </a>
+            <p style={{ whiteSpace: 'pre-wrap'}}>{project[DESCRIPTION]}</p>
+          {project[SKILLS]}
+          <a className={styles.projectLearnMore} href={project[LINK]}><div>Learn More</div></a>
+          </div>
         ))}
       </div>
      </FadeInWhenVisible>

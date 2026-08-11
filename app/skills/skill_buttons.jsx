@@ -113,11 +113,12 @@ export default function SkillIcon({ skill, type, small = true }) {
   let boxStyle = { backgroundColor: skill[color], paddingRight: paddingRight }
   let imageStyle = {transform: 'scale(' + skill[scale] + ')'}
   if (small) {
-    boxStyle['fontSize'] = '14px'
+    boxStyle['fontSize'] = '12px'
     boxStyle['minWidth'] = '50px'
-    boxStyle['height'] = '30px'
-    imageStyle['width'] = '25px'
-    imageStyle['height'] = '25px'
+    boxStyle['height'] = '20px'
+    boxStyle['borderRadius'] = '5px'
+    imageStyle['width'] = '15px'
+    imageStyle['height'] = '15px'
   }
   if (image) {
     paddingRight = '10px'
