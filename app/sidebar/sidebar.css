@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from { opacity: 1;}
+  to { opacity: 0;}
+}
+
 .sidebar {
     z-index: 100;
     position: fixed;
@@ -5,6 +15,7 @@
     left: 0;
     width: 60px;
     height: 100%;
+    overflow-y:scroll;
     background-color: rgba(0, 0, 0, 0);
     transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out, border-width 0.3s ease-in-out;
 }
@@ -16,6 +27,7 @@
 .sidebar.open.mobile {
     width: 100%;
 }
+
 
 
 .sidebar button {

@@ -4,7 +4,7 @@ import about from './about.module.css';
 import FadeInWhenVisible from '../animations';
 
 
-export default function About({ mobile = false }: { mobile?: boolean }) {
+export default function About() {
   function skillText(text : string = "") {
     return <p>{text}</p>
   }
