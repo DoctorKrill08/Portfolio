@@ -1,0 +1,56 @@
+.projectsContainer {
+    min-height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    place-items: center;
+    gap: 30px;
+}
+.projectBubble {
+    display: grid;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    place-items: center;
+    align-items: top;
+    box-shadow: 0 0 2px white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 400px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.projectBubble:hover {
+    box-shadow: 0 0 10px white;
+    transform: scale(1.03);
+}
+.projectBubble h2 {
+    text-align: center;
+}
+.project{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: black;
+    opacity: 1;
+}
+.project img {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.projectButtonContainer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.projectButton {
+    width: 80px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 44px;
+}

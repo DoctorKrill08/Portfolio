@@ -3,7 +3,10 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import './globals.css';
 import Sidebar from './sidebar/sidebar';
-import Home from './home/home';
+import About from './about/about';
+import Education from './education/education';
+import Skills from './skills/skills';
+import Projects from './projects/projects';
 
 
 function useIsMobile(): boolean {
@@ -36,9 +39,12 @@ export default function Page() {
 
 
   return (
-    <div>
+    <div className='home'>
         <Sidebar mobile={mobile} />
-        <Home mobile={mobile}/>
+        <About mobile={mobile}/>
+        <Education />
+        <Skills />
+        <Projects />
     </div>
   );
 }

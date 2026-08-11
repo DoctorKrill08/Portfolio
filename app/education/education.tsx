@@ -6,7 +6,7 @@ import FadeInWhenVisible from '../animations';
 export default function Education() {
   return (
       <FadeInWhenVisible className="bubble">
-        <h1 style={{ marginTop: '20px', marginBottom: '20px' }}>Education</h1>
+        <h1 style={{ marginTop: '20px', marginBottom: '20px', height: '70px', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>Education</h1>
         <div className={education.educationContainer}>
           <div className={education.educationItem} style={{backgroundColor: '#24688c', borderColor: '#1a2761', boxShadow: '0 0 4px #1a5761'}}>
             <h2>University of North Carolina at Chapel Hill</h2>

@@ -26,7 +26,7 @@ body {
 .bubble {
     margin-top: 20px;
     width: 90vw;
-    min-height: 100vh;
+    min-height: 80vh;
     margin-left: 10px;
     margin-right: 10px;
     display: grid;
@@ -36,6 +36,22 @@ body {
     background-color: rgba(150,150,220,0.05);
     box-shadow: 0 0 3px black;
     border-radius: 10px;
-    padding: 10px;
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.home {
+    margin-top: 20px;
+    background-color: transparent;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+}
+.home h1 {
+    font-size: 42px;
+}
+.home h2 {
+    font-size: 24px;
 }

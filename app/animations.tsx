@@ -2,19 +2,20 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-function FadeInWhenVisible({ className, children, ...props }) {
+function FadeInWhenVisible({ className, children, threshold = 0.1, rootMargin = '0px 0px', ...props }) {
   const { ref, inView } = useInView({
-    threshold: 0.2
+    threshold,
+    rootMargin,
   });
   const animation = useAnimation();
 
-  const x_initial = -120
+  const x_initial = -60
 
   useEffect(() => {
     animation.start({
       opacity: inView ? 1 : 0,
       x: inView ? 0 : x_initial,
-      transition: { type: 'tween', ease: 'easeOut', duration: 0.6 }
+      transition: { type: 'tween', ease: 'easeInOut', duration: 0.6 }
     });
   }, [inView, animation]);
 
