@@ -54,71 +54,78 @@ const name = 0
 const color = 1
 const icon = 2
 const scale = 3
+var skills = [];
+skills[LANGUAGES] = {
+  [JAVA]: [JAVA, blue, '/images/java_logo_white.webp', 1.3],
+  [PYTHON]: [PYTHON, blue, '/images/python_logo_white.webp', 0.8],
+  [LUA]: [LUA, blue, '/images/lua_logo_white.webp', 1],
+  [JAVASCRIPT]: [JAVASCRIPT, yellow, '/images/javascript_logo_white.webp', 0.9],
+  [TYPESCRIPT]: [TYPESCRIPT, yellow, '/images/typescript_logo_white.webp', 1.1],
+  [HTML]: [HTML, yellow, '/images/html_logo_white.webp', 1],
+  [CSS]: [CSS, yellow, '/images/css_logo_white.webp', 0.8]
+}
+skills[FRAMEWORKS] = {
+  [FLASK]: [FLASK, blue, '/images/flask_logo_white.webp', 1],
+  [FAST_API]: [FAST_API, blue, '/images/fastapi_logo_white.webp', 0.9],
+  [WEBSOCKETS]: [WEBSOCKETS, purple, '/images/websockets_logo_white.webp', 0.9],
+  [SOCKETIO]: [SOCKETIO, purple, '/images/socketio_logo_white.webp', 0.9],
+  [REACT]: [REACT, yellow, '/images/react_logo_white.svg', 0.9],
+  [OPENCV]: [OPENCV, green, '/images/opencv_logo_white.webp', 0.9],
+  [YOLO]: [YOLO, green, '/images/yolo_logo_white.webp', 0.9]
+}
+skills[HARDWARE] = {
+  [DEPTH_CAMERA]: [DEPTH_CAMERA, green, null, null],
+  [LIDAR]: [LIDAR, green, null, null],
+  [WEBCAM]: [WEBCAM, green, null, null],
+  [WHEELED_ODOMETRY]: [WHEELED_ODOMETRY, yellow, null, null],
+  [IMU]: [IMU, yellow, null, null],
+  [GPS]: [GPS, blue, null, null],
+  [RADIO]: [RADIO, red, null, null],
+  [JETSON_NANO]: [JETSON_NANO, purple, null, null],
+  [ARDUINO]: [ARDUINO, purple, null, null]
+}
 
+skills[OTHER] = {
+  [LOCALIZATION]: [LOCALIZATION, blue, null, null],
+  [APRIL_TAGS]: [APRIL_TAGS, blue, null, null],
+  [GAME_DEVELOPEMENT]: [GAME_DEVELOPEMENT, blue, null, null],
+  [CONTROL]: [CONTROL, yellow, null, null],
+  [MAPPING]: [MAPPING, purple, null, null],
+  [PATHING]: [PATHING, purple, null, null],
+  [SENSOR_FUSION]: [SENSOR_FUSION, green, null, null],
+}
+export default function SkillIcon({ skill, type, small = true }) {
 
-export default function SkillIcon({ skill,type }) {
-  var skills = [];
-  skills[LANGUAGES] = {
-    [JAVA]: [JAVA, blue, '/images/java_logo_white.webp', 1.3],
-    [PYTHON]: [PYTHON, blue, '/images/python_logo_white.webp', 0.8],
-    [LUA]: [LUA, blue, '/images/lua_logo_white.webp', 1],
-    [JAVASCRIPT]: [JAVASCRIPT, yellow, '/images/javascript_logo_white.webp', 0.9],
-    [TYPESCRIPT]: [TYPESCRIPT, yellow, '/images/typescript_logo_white.webp', 1.1],
-    [HTML]: [HTML, yellow, '/images/html_logo_white.webp', 1],
-    [CSS]: [CSS, yellow, '/images/css_logo_white.webp', 0.8]
-  }
-  skills[FRAMEWORKS] = {
-    [FLASK]: [FLASK, blue, '/images/flask_logo_white.webp', 1],
-    [FAST_API]: [FAST_API, blue, '/images/fastapi_logo_white.webp', 0.9],
-    [WEBSOCKETS]: [WEBSOCKETS, purple, '/images/websockets_logo_white.webp', 0.9],
-    [SOCKETIO]: [SOCKETIO, purple, '/images/socketio_logo_white.webp', 0.9],
-    [REACT]: [REACT, yellow, '/images/react_logo_white.svg', 0.9],
-    [OPENCV]: [OPENCV, green, '/images/opencv_logo_white.webp', 0.9],
-    [YOLO]: [YOLO, green, '/images/yolo_logo_white.webp', 0.9]
-  }
-  skills[HARDWARE] = {
-    [DEPTH_CAMERA]: [DEPTH_CAMERA, green, null, null],
-    [LIDAR]: [LIDAR, green, null, null],
-    [WEBCAM]: [WEBCAM, green, null, null],
-    [WHEELED_ODOMETRY]: [WHEELED_ODOMETRY, yellow, null, null],
-    [IMU]: [IMU, yellow, null, null],
-    [GPS]: [GPS, blue, null, null],
-    [RADIO]: [RADIO, red, null, null],
-    [JETSON_NANO]: [JETSON_NANO, purple, null, null],
-    [ARDUINO]: [ARDUINO, purple, null, null]
-  }
-
-  skills[OTHER] = {
-    [LOCALIZATION]: [LOCALIZATION, blue, null, null],
-    [APRIL_TAGS]: [APRIL_TAGS, blue, null, null],
-    [GAME_DEVELOPEMENT]: [GAME_DEVELOPEMENT, blue, null, null],
-    [CONTROL]: [CONTROL, yellow, null, null],
-    [MAPPING]: [MAPPING, purple, null, null],
-    [PATHING]: [PATHING, purple, null, null],
-    [SENSOR_FUSION]: [SENSOR_FUSION, green, null, null],
-    [AUTONOMOUS]: [AUTONOMOUS, red, null, null],
-    [TELEOPERATED]: [TELEOPERATED, red, null, null],
-    [FPV]: [FPV, red, null, null],
-  }
   if (!(Object.hasOwn(skills, type))) {
     console.log("type: " + type + " not found")
     return
   }
-  skills = skills[type]
-  if (!(Object.hasOwn(skills, skill))) {
+  if (!(Object.hasOwn(skills[type], skill))) {
     console.log("skill: " + skill + " not found")
     return
   }
-  skill = skills[skill]
+  skill = skills[type][skill]
   let image = skill[icon]
   let paddingRight = '5px'
 
+
+  let className = styles.skillIcon
+  let boxStyle = { backgroundColor: skill[color], paddingRight: paddingRight }
+  let imageStyle = {transform: 'scale(' + skill[scale] + ')'}
+  if (small) {
+    boxStyle['fontSize'] = '14px'
+    boxStyle['minWidth'] = '50px'
+    boxStyle['height'] = '30px'
+    imageStyle['width'] = '25px'
+    imageStyle['height'] = '25px'
+  }
   if (image) {
     paddingRight = '10px'
-    image = <img src={image} style={{transform: 'scale(' + skill[scale] + ')'}} alt={skill[name]} />
+    image = <img src={image} style={imageStyle} alt={skill[name]} />
   }
+
   return (
-    <div className={styles.skillIcon} style={{ backgroundColor: skill[color], paddingRight: paddingRight}}>
+    <div className={className} style={boxStyle}>
       {image}
       {skill[name]}
     </div>

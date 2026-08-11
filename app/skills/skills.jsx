@@ -12,25 +12,25 @@ export default function Skills() {
       <h2 style={{ marginTop: '20px', marginBottom: '10px', fontSize: '36px'}}>Languages</h2>
       <br/>
       <div className={styles.skillBox}>
-        <SkillIcon skill={skills.JAVA} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.LUA} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.TYPESCRIPT} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} />
-        <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} />
+        <SkillIcon skill={skills.JAVA} type={skills.LANGUAGES} small={false}/>
+        <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} small={false} />
+        <SkillIcon skill={skills.LUA} type={skills.LANGUAGES} small={false}/>
+        <SkillIcon skill={skills.TYPESCRIPT} type={skills.LANGUAGES} small={false}/>
+        <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} small={false}/>
+        <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} small={false}/>
+        <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} small={false}/>
       </div>
 
       <h2 style={{ marginTop: '20px', marginBottom: '10px', fontSize: '36px' }}>Frameworks & Libraries</h2>
       <br />
       <div className={styles.skillBox}>
-        <SkillIcon skill={skills.FLASK} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.FAST_API} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.WEBSOCKETS} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.SOCKETIO} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.REACT} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.OPENCV} type={skills.FRAMEWORKS} />
-        <SkillIcon skill={skills.YOLO} type={skills.FRAMEWORKS} />
+        <SkillIcon skill={skills.FLASK} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.FAST_API} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.WEBSOCKETS} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.SOCKETIO} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.REACT} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.OPENCV} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.YOLO} type={skills.FRAMEWORKS} small={false}/>
       </div>
 
      </FadeInWhenVisible>

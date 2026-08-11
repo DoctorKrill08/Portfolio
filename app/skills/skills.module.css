@@ -1,7 +1,5 @@
 .skillBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
     display: flex;
     align-items: top;
     justify-content: center;
@@ -19,10 +17,8 @@
     justify-content: center;
     display: flex;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.skillIcon p{
     font-size: 24px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .skillIcon img {
     margin-right: 5px;

@@ -5,6 +5,7 @@ import FadeInWhenVisible from '../animations';
 import * as skills from '../skills/skill_buttons'
 import SkillIcon from '../skills/skill_buttons';
 import skillStyle from '../skills/skills.module.css';
+import { transform } from 'motion';
 
 
 export default function Skills({mobile = false }) {
@@ -54,14 +55,13 @@ export default function Skills({mobile = false }) {
         <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.WHEELED_ODOMETRY} type={skills.HARDWARE} />
+          <SkillIcon skill={skills.IMU} type={skills.HARDWARE} />
           <SkillIcon skill={skills.WEBCAM} type={skills.HARDWARE} />
         </div>
         <div className={skillStyle.projectSkillTitle}><h2>Abilities</h2></div>
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.CONTROL} type={skills.OTHER} />
           <SkillIcon skill={skills.APRIL_TAGS} type={skills.OTHER} />
-          <SkillIcon skill={skills.AUTONOMOUS} type={skills.OTHER} />
-          <SkillIcon skill={skills.TELEOPERATED} type={skills.OTHER} />
         </div>
         </div>
     }
@@ -82,6 +82,7 @@ export default function Skills({mobile = false }) {
       <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
       <div className={skillStyle.skillBox}>
         <SkillIcon skill={skills.WHEELED_ODOMETRY} type={skills.HARDWARE} />
+        <SkillIcon skill={skills.IMU} type={skills.HARDWARE} />
         <SkillIcon skill={skills.WEBCAM} type={skills.HARDWARE} />
       </div>
 
@@ -91,8 +92,6 @@ export default function Skills({mobile = false }) {
         <SkillIcon skill={skills.LOCALIZATION} type={skills.OTHER} />
         <SkillIcon skill={skills.APRIL_TAGS} type={skills.OTHER} />
         <SkillIcon skill={skills.SENSOR_FUSION} type={skills.OTHER} />
-        <SkillIcon skill={skills.AUTONOMOUS} type={skills.OTHER} />
-        <SkillIcon skill={skills.TELEOPERATED} type={skills.OTHER} />
       </div>
       </div>
     }
@@ -135,9 +134,6 @@ export default function Skills({mobile = false }) {
           <SkillIcon skill={skills.PATHING} type={skills.OTHER} />
           <SkillIcon skill={skills.LOCALIZATION} type={skills.OTHER} />
           <SkillIcon skill={skills.SENSOR_FUSION} type={skills.OTHER} />
-          <SkillIcon skill={skills.AUTONOMOUS} type={skills.OTHER} />
-          <SkillIcon skill={skills.TELEOPERATED} type={skills.OTHER} />
-          <SkillIcon skill={skills.FPV} type={skills.OTHER} />
         </div>
 
         </div>
@@ -171,9 +167,6 @@ export default function Skills({mobile = false }) {
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.CONTROL} type={skills.OTHER} />
           <SkillIcon skill={skills.APRIL_TAGS} type={skills.OTHER} />
-          <SkillIcon skill={skills.AUTONOMOUS} type={skills.OTHER} />
-          <SkillIcon skill={skills.TELEOPERATED} type={skills.OTHER} />
-          <SkillIcon skill={skills.FPV} type={skills.OTHER} />
         </div>
         </div>
     }
