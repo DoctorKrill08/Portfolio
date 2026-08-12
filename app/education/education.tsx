@@ -8,14 +8,14 @@ export default function Education() {
       <FadeInWhenVisible className="bubble">
         <h1 style={{ marginTop: '20px', marginBottom: '20px', height: '70px', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>Education</h1>
         <div className={education.educationContainer}>
-          <div className={education.educationItem} style={{backgroundColor: '#24688c', borderColor: '#1a2761', boxShadow: '0 0 4px #1a5761'}}>
+          <div className={education.educationItem} style={{backgroundColor: 'transparent', boxShadow: '0 0 4px rgba(39, 133, 245, 1)'}}>
             <h2>University of North Carolina at Chapel Hill</h2>
             <i>First Year (2026) </i>
             <div className={education.educationItemContainer}>
               <p style={{ width: '100%' }}>Description TBA</p>
             </div>
           </div>
-          <div className={education.educationItem} style={{backgroundColor: '#2a613f', borderColor: '#d07424', boxShadow: '0 0 4px #d07424'}}>
+          <div className={education.educationItem} style={{backgroundColor: 'transparent',boxShadow: '0 0 4px rgba(23, 133, 53, 1)'}}>
             <h2>Guilford Technical Commmunity College</h2>
             <i>Graduated (2026)</i>
             <p><b>Associates in Arts & Java Programming Certification</b></p>
