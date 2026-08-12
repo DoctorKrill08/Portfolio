@@ -29,7 +29,7 @@ export default function Ufg() {
 
   return (
     <div>
-      <div className='background'/>
+      <div className='background' style={{'--bg-image': 'url(/images/ufgThumbnail.webp)',position:'fixed' }}/>
       <FadeInWhenVisible style = {{marginTop: '0px'}}>
         <ProjectSummary projectNumber={projects.UFG}>
           <p style = {{margin: '10px 10px 10px 10px'}}>
@@ -73,7 +73,7 @@ export default function Ufg() {
         </div>
       </FadeInWhenVisible>
 
-      <FadeInWhenVisible><h1 style={{ textAlign: 'center',marginTop: '170px', marginBottom: '250px'}}>Timeline</h1></FadeInWhenVisible>
+      <FadeInWhenVisible><h1 style={{ textAlign: 'center',marginTop: '50vh', marginBottom: '50vh'}}>Timeline</h1></FadeInWhenVisible>
       {generateBubble('Game Creation (March 2022)', 'During the creation of the game, I was started learning to code and ended up creating the games first character, however the quality was not the best...',"/videos/ufgGTFrisk1.mp4")}
       {generateBubble('Pre-Alpha (October 2022)', 'After several months of work the game had 7 characters, a main menu and was released in pre alpha to play. However, we realized the game was still in development and needed to be improved so we decided to step back, delete some characters, and completely rework the game.', '/videos/ufgGTFrisk2.mp4','https://www.youtube.com/watch?v=7YO80dB_Zsg')}
       {generateBubble('Release (February 2023) and Undyne Update (May 2023)', 'After some setbacks and reworks, the game was released including 3 characters (Glitchtale Frisk, Undertale Sans, Omori). Later, in May, a new character (Undyne) and a new map (Ruins) was added.', '/videos/ufgRoar.mp4','https://www.youtube.com/watch?v=-nu1XywrdM8')}

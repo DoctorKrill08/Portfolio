@@ -10,7 +10,8 @@ import Projects from './projects/projects';
 
 export default function Page() {
   return (
-      <div>
+    <div>
+        <div style = {{'--bg-image': 'url(/images/background.webp)' }} className="background"></div>
         <About/>
         <Education />
         <Skills />
