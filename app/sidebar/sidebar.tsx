@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { projects,projectLength } from "../projects/project_summary";
 import { motion, AnimatePresence } from "framer-motion";
 
-function useIsMobile(): boolean {
+export const useIsMobile = (): boolean => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
       return window.innerWidth <= 768;
