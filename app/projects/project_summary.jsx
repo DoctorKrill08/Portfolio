@@ -3,6 +3,7 @@ import SkillIcon from '../skills/skill_buttons';
 import skillStyle from '../skills/skills.module.css';
 import { transform } from 'motion';
 import Link from '../link';
+import projectStyles from './projects.module.css';
 
 let link = Link()
   export const LINK = 'link'
@@ -10,6 +11,7 @@ let link = Link()
   export const TITLE = 'title'
   export const IMAGE = 'image'
   export const SKILLS = 'skills'
+  export const YEAR = 'year'
 
   export const UFG = 0
   export const SOAR = 1
@@ -23,7 +25,8 @@ let link = Link()
   projects[UFG] = {
       [NAME]: 'UFG',
       [LINK]: link + 'ufg',
-      [DESCRIPTION]: 'March of 2022 to Present\nMy very first project! A roblox multiplayer fighting game where players fight eachother as various Undertale characters. This game achieved over 6 million visits and over 2 million unique users.',
+      [YEAR]: 'March of 2022 to May of 2026',
+      [DESCRIPTION]: 'My very first project! A roblox multiplayer fighting game where players fight eachother as various Undertale characters. This game achieved over 6 million visits and over 2 million unique users.',
       [TITLE]: 'Undertale Fighting Game',
       [IMAGE]: '/images/UFGIcon.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -37,7 +40,8 @@ let link = Link()
   projects[SOAR] = {
       [NAME]: 'SOAR',
       [LINK]: link + 'soar',
-      [DESCRIPTION]: ' December of 2024 to August of 2025\nMy first robot! SOAR was a FIRST Tech Challenge Robot for the INTO THE DEEP Season built by team #10195 Night Owls. With the software I developed, this robot achieved the #1 Autonomous Offensive Power Rating in the State',
+      [YEAR]: 'December of 2024 to August of 2025',
+      [DESCRIPTION]: 'My first robot! SOAR was a FIRST Tech Challenge Robot for the INTO THE DEEP Season built by team #10195 Night Owls. With the software I developed, this robot achieved the #1 Autonomous Offensive Power Rating in the State',
       [TITLE]: 'SOAR',
       [IMAGE]: '/images/SOAR.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -63,7 +67,8 @@ let link = Link()
   projects[FURY] = {
       [NAME]: 'FURY',
       [LINK]: link + 'fury',
-      [DESCRIPTION]: 'January of 2025 to June of 2026\nFURY was a FIRST Tech Challenge Robot for the DECODE Season built by team #10195 Night Owls. This robot won our teams very first competition since 2017 with impressive software feats like shooting while moving and rapid fire capabilities due to the software I developed.',
+      [YEAR]: 'January of 2025 to June of 2026',
+      [DESCRIPTION]: 'FURY was a FIRST Tech Challenge Robot for the DECODE Season built by team #10195 Night Owls. This robot won our teams very first competition since 2017 with impressive software feats like shooting while moving and rapid fire capabilities due to the software I developed.',
       [TITLE]: 'FURY',
       [IMAGE]: '/images/FURY.webp',
     [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -93,7 +98,8 @@ let link = Link()
   projects[AWARE] = {
       [NAME]: 'AWARE',
       [LINK]: link + 'aware',
-      [DESCRIPTION]: 'Summer of 2026\nAWARE was an over 20 year old Pioner 3-DX Robot that was refitted with modern equipment. This Robot was inteded for agricultural robot research. I developed software allowing this robot to accomplish autonomous obstacle avoidance while pathing towards its goal.',
+      [YEAR]: 'Summer of 2026',
+      [DESCRIPTION]: 'AWARE was an over 20 year old Pioner 3-DX Robot that was refitted with modern equipment. This Robot was inteded for agricultural robot research. I developed software allowing this robot to accomplish autonomous obstacle avoidance while pathing towards its goal.',
       [TITLE]: 'AWARE',
       [IMAGE]: '/images/AWARE.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -136,7 +142,8 @@ let link = Link()
   projects[MOM] = {
       [NAME]: 'MOM',
       [LINK]: link + 'mom',
-      [DESCRIPTION]: 'Summer of 2026\nMOM was a robot that was intended for picking up toys and cloths from the floor. Through my software this robot achieved full wireless FPV control while being able to autonomously track, follow and avoid april tags.',
+      [YEAR]: 'Summer of 2026',
+      [DESCRIPTION]: 'MOM was a robot that was intended for picking up toys and cloths from the floor. Through my software this robot achieved full wireless FPV control while being able to autonomously track, follow and avoid april tags.',
       [TITLE]: 'MOM',
       [IMAGE]: '/images/MOM.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
@@ -185,4 +192,20 @@ let link = Link()
       projectNumber = 0
     }
     return projectNumber + 1
+  }
+
+export default function ProjectSummary({ projectNumber, children = null}) {
+    if (projectNumber < 0 || projectNumber >= projectLength) {
+      return null
+    }
+    const project = projects[projectNumber]
+    return (
+      <div className='bubble'>
+        <h1>{project.title}</h1>
+        <h2>{project.year}</h2>
+        <div className={projectStyles.project}><img src={project.image}  alt={project.title} /></div>
+        <p>{project.description}</p>
+        {children}
+      </div>
+    );
   }

@@ -1,0 +1,11 @@
+.miniBubble{
+    min-width: 300px;
+    width: 80vw;
+    box-shadow: 0 0 3px white;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+}

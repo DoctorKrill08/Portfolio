@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect} from "react";
 import styles from './projects.module.css';
 import FadeInWhenVisible from '../animations';
-import { projects, TITLE, DESCRIPTION, LINK, IMAGE, SKILLS } from './project_summary';
+import { projects, TITLE, DESCRIPTION, LINK, IMAGE, SKILLS, YEAR } from './project_summary';
 
 
 export default function Skills({ mobile = false }) {
@@ -16,6 +16,7 @@ export default function Skills({ mobile = false }) {
         {projects.map((project, index) => (
           <div key={index} className={styles.projectBubble}>
             <h2>{project[TITLE]}</h2>
+            <p style={{marginBottom : '10px'}}>{project[YEAR]}</p>
             <div className={styles.project}>
               <a className={styles.projectLearnMore} href={project[LINK]}><img src={project[IMAGE]} alt={project[TITLE]}/></a>
 
