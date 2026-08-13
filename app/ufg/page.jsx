@@ -42,7 +42,7 @@ export default function Ufg() {
       <FadeInWhenVisible className = "bubble">
         <h1>Developers</h1>
         <div className={styles.credits}>
-          <div className={styles.miniBubble}>
+          <div className={"miniBubble"}>
             <h2>Ethan Kim</h2>
             <i>Creator,Programmer,Game Designer,Visual Effects</i>
             <div className={about.iconContainer}>
@@ -52,7 +52,7 @@ export default function Ufg() {
               <a className={about.icon}  href="https://www.roblox.com/users/170874514/profile"><img src={'/images/roblox_logo.webp'} alt="roblox" /></a>
             </div>
           </div>
-          <div className={styles.miniBubble}>
+          <div className={"miniBubble"}>
               <h2>Tyler Knepp</h2>
             <i>Modeler, Map Designer, Community Manager</i>
             <div className={about.iconContainer}>
@@ -62,7 +62,7 @@ export default function Ufg() {
                <a className={about.icon} href="https://www.roblox.com/users/170874514/profile"><img src={'/images/roblox_logo.webp'} alt="roblox" /></a>
             </div>
           </div>
-          <div className={styles.miniBubble}>
+          <div className={"miniBubble"}>
             <h2>Emilio Alanis-Merlin</h2>
             <i>Animator</i>
             <div className={about.iconContainer}>
