@@ -7,7 +7,7 @@ import about from '../about/about.module.css';
 import FadeInWhenVisible from '../animations';
 
 
-export default function Ufg() {
+export default function Fury() {
 
   return (
     <div>
@@ -29,7 +29,19 @@ export default function Ufg() {
           To do this I first employed a simple PID Controller but I realized this either was too slow or too aggressive. Then I combined it with Feedforward so that feedforward would maintain the correct speed (more stable) and the PID Controller would react to the changes in flywheel speed.
           This worked better but I noticed the robot would, especially when not at full battery, undershoot the ladder balls. To fix this I made the PID part of the control system switch to a <b>bang bang</b> controller while shooting AND added <b>Battery Voltage Normalization</b> to the PIDF Control System.
         </p>
-        <img src={"/images/FuryControl.webp"} style={{maxWidth:'90%', marginTop:'20px'}} />
+        <img src={"/images/FuryControl.webp"} style={{ maxWidth: '90%', marginTop: '20px' }} />
+        <video
+          style={{ marginTop: "20px",maxWidth: "90%"}}
+          controls = {true}
+          autoPlay = {false}
+          loop = {true}
+          muted = {true}
+        >
+          <source src={'/videos/furyFar.mp4'} type="video/mp4" />
+        </video>
+        <i style={{marginTop:'10px'}}>
+          Above shows the adaptable flywheel control works even at far ranges.
+        </i>
       </FadeInWhenVisible>
 
       <FadeInWhenVisible className={"bubble"} style={{ marginTop: '20px' }}>
@@ -58,6 +70,18 @@ export default function Ufg() {
         <p style={{ marginTop: '10px' }}>
           Given the robots current position, heading, and a goal position, the target angle of the turret can be calculated to aim at the goal. I did this by using trigonometry (atan2) to calculate the angle between the robot{"'"}s current position and the goal position and then using the calculated angle and the robot{"'"}s heading to calculate the target angle of the turret.
         </p>
+        <video
+          style={{ marginTop: "20px",maxWidth: "90%"}}
+          controls = {true}
+          autoPlay = {false}
+          loop = {true}
+          muted = {true}
+        >
+          <source src={'/videos/furyTurret.mp4'} type="video/mp4" />
+        </video>
+        <i style={{marginTop:'10px'}}>
+          Above demonstrates turret tracking based on odometry readings. The turret had a limited degree of rotation.
+        </i>
         <h2 style={{ marginTop: '10px' }}>
           Dynamic Flywheel Velocity
         </h2>
@@ -121,9 +145,26 @@ export default function Ufg() {
         >
           <source src={'/videos/furyAuto.mp4'} type="video/mp4" />
         </video>
-        <p style={{marginTop:'10px'}}>
+        <i style={{marginTop:'10px'}}>
           Above shows the robot performing an attempted 18 ball autonomous.
+        </i>
+
+        <p style={{marginTop: '30px'}}>
+          To collaborate with teamates who may be using the near zone, I created a far zone autonomous that would use opencv to detect balls and then have the robot use a PID Controller on the Drivetrain to move the robot to the largest cluster of visible balls.
         </p>
+
+        <video
+          style={{ marginTop: "20px",maxWidth: "90%"}}
+          controls = {true}
+          autoPlay = {false}
+          loop = {true}
+          muted = {true}
+        >
+          <source src={'/videos/furyCV.mp4'} type="video/mp4" />
+        </video>
+        <i style={{marginTop:'10px'}}>
+          Above shows the robot demonstrating the ball tracking camera vision
+        </i>
       </FadeInWhenVisible>
 
       <FadeInWhenVisible className={"bubble"} style={{ marginTop: '20px' }}>

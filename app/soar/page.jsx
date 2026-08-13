@@ -7,7 +7,7 @@ import about from '../about/about.module.css';
 import FadeInWhenVisible from '../animations';
 
 
-export default function Ufg() {
+export default function Soar() {
 
   return (
     <div>
