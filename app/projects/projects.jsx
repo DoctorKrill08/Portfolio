@@ -3,7 +3,7 @@ import { useState, useEffect} from "react";
 import styles from './projects.module.css';
 import FadeInWhenVisible from '../animations';
 import { projects, TITLE, DESCRIPTION, LINK, IMAGE, SKILLS, YEAR } from './project_summary';
-
+import Link from 'next/link';
 
 export default function Skills({ mobile = false }) {
 
@@ -18,12 +18,12 @@ export default function Skills({ mobile = false }) {
             <h2>{project[TITLE]}</h2>
             <p style={{marginBottom : '10px'}}>{project[YEAR]}</p>
             <div className={styles.project}>
-              <a className={styles.projectLearnMore} href={project[LINK]}><img src={project[IMAGE]} alt={project[TITLE]}/></a>
+              <Link className={styles.projectLearnMore} href={project[LINK]}><img src={project[IMAGE]} alt={project[TITLE]}/></Link>
 
             </div>
             <p style={{ whiteSpace: 'pre-wrap'}}>{project[DESCRIPTION]}</p>
           {project[SKILLS]}
-          <a className={styles.projectLearnMore} href={project[LINK]}><div>Learn More</div></a>
+          <Link className={styles.projectLearnMore} href={project[LINK]}><div>Learn More</div></Link>
           </div>
         ))}
       </div>

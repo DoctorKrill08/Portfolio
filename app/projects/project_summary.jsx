@@ -2,10 +2,8 @@ import * as skills from '../skills/skill_buttons'
 import SkillIcon from '../skills/skill_buttons';
 import skillStyle from '../skills/skills.module.css';
 import { transform } from 'motion';
-import Link from '../link';
 import projectStyles from './projects.module.css';
 
-let link = Link()
   export const LINK = 'link'
   export const DESCRIPTION = 'description'
   export const TITLE = 'title'
@@ -24,7 +22,7 @@ let link = Link()
   export const projects = []
   projects[UFG] = {
       [NAME]: 'UFG',
-      [LINK]: link + 'ufg',
+      [LINK]: '/ufg',
       [YEAR]: 'March of 2022 to May of 2026',
       [DESCRIPTION]: 'My very first project! A roblox multiplayer fighting game where players fight eachother as various Undertale characters. This game achieved over 6 million visits and over 2 million unique users.',
       [TITLE]: 'Undertale Fighting Game',
@@ -39,7 +37,7 @@ let link = Link()
     }
   projects[SOAR] = {
       [NAME]: 'SOAR',
-      [LINK]: link + 'soar',
+      [LINK]: '/soar',
       [YEAR]: 'December of 2024 to August of 2025',
       [DESCRIPTION]: 'My first robot! SOAR was a FIRST Tech Challenge Robot for the INTO THE DEEP Season built by team #10195 Night Owls. With the software I developed, this robot achieved the #1 Autonomous Offensive Power Rating in the State',
       [TITLE]: 'SOAR',
@@ -66,7 +64,7 @@ let link = Link()
     }
   projects[FURY] = {
       [NAME]: 'FURY',
-      [LINK]: link + 'fury',
+      [LINK]: '/fury',
       [YEAR]: 'January of 2025 to June of 2026',
       [DESCRIPTION]: 'FURY was a FIRST Tech Challenge Robot for the DECODE Season built by team #10195 Night Owls. This robot won our teams very first competition since 2017 with impressive software feats like shooting while moving and rapid fire capabilities due to the software I developed.',
       [TITLE]: 'FURY',
@@ -97,7 +95,7 @@ let link = Link()
     }
   projects[AWARE] = {
       [NAME]: 'AWARE',
-      [LINK]: link + 'aware',
+      [LINK]: '/aware',
       [YEAR]: 'Summer of 2026',
       [DESCRIPTION]: 'AWARE was an over 20 year old Pioner 3-DX Robot that was refitted with modern equipment. This Robot was inteded for agricultural robot research. I developed software allowing this robot to accomplish autonomous obstacle avoidance while pathing towards its goal.',
       [TITLE]: 'AWARE',
@@ -141,7 +139,7 @@ let link = Link()
     }
   projects[MOM] = {
       [NAME]: 'MOM',
-      [LINK]: link + 'mom',
+      [LINK]: '/mom',
       [YEAR]: 'Summer of 2026',
       [DESCRIPTION]: 'MOM was a robot that was intended for picking up toys and cloths from the floor. Through my software this robot achieved full wireless FPV control while being able to autonomously track, follow and avoid april tags.',
       [TITLE]: 'MOM',
