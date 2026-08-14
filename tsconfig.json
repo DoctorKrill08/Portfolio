@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/projects/projects.jsx", "app/skills/skills.jsx", "app/ufg/page.jsx"  ],
+, "app/projects/projects.jsx", "app/skills/skills.jsx", "app/ufg/page.jsx", "app/page.jsx", "app/animations.jsx"  ],
   "exclude": ["node_modules"]
 }
