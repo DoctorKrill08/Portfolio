@@ -24,6 +24,7 @@ export default function Aware() {
         <p>
           https://www.linkedin.com/in/ethan-kim-590275394
         </p>
+        <img src={'/images/LinkedInQR.webp'} alt="linkedin" />
         <a className={projectStyles.projectLearnMore} href={'https://www.linkedin.com/in/ethan-kim-590275394'}>My LinkedIn</a>
 
       </FadeInWhenVisible>

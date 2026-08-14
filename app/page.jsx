@@ -6,6 +6,7 @@ import Sidebar from './sidebar/sidebar';
 import About from './about/about';
 import Education from './education/education';
 import Skills from './skills/skills';
+import Experience from './experience/experience';
 import Projects from './projects/projects';
 
 export default function Page() {
@@ -15,6 +16,7 @@ export default function Page() {
         <About/>
         <Education />
         <Skills />
+        <Experience />
         <Projects />
       </div>
   );
