@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-function FadeInWhenVisible({ className, children, threshold = 0.1, rootMargin = '0px 0px', ...props }) {
+function FadeInWhenVisible({ className, children, threshold = 0.07, rootMargin = '0px 0px', ...props }) {
   const { ref, inView } = useInView({
     threshold,
     rootMargin,

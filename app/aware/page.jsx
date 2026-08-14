@@ -73,6 +73,10 @@ export default function Aware() {
         <i style={{marginTop:'10px'}}>
           Above shows a video of the robot being remotely operated in FPV.
         </i>
+        <img src={"/images/awareMapInterface.webp"} style={{ marginTop: '20px' }} />
+        <i style={{marginTop:'10px'}}>
+          Above shows the mapping part of the interface where the user has selected multiple points for the robot to go to.
+        </i>
       </FadeInWhenVisible>
       <FadeInWhenVisible className={"bubble"} style={{ marginTop: '20px' }}>
         <h1>Sensors</h1>
@@ -133,7 +137,14 @@ export default function Aware() {
           Global Localization
         </h2>
         <p style={{ marginTop: '10px' }}>
-          The robot needed global localization to correct for drift and to ensure accurate positioning. While traditional GPS is effective for cars, it is not accurate enough for a small robot like AWARE.
+          The robot needed global localization to correct for drift and to ensure accurate positioning.
+        </p>
+        <img src={"/images/awareUCenter.webp"} style={{ marginTop: '20px' }} />
+        <i style={{marginTop:'10px'}}>
+          Above shows the u-center software running with a GPS connected.
+        </i>
+        <p>
+          While traditional GPS is effective for cars, it is not accurate enough for a small robot like AWARE.
           Here is a sample I took using matplotlib to visualize the GPS noise.
         </p>
         <img src={"/images/awareGpsNoise.webp"} style={{ marginTop: '20px' }} />

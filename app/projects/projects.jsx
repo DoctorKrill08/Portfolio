@@ -14,7 +14,7 @@ export default function Skills({ mobile = false }) {
       <h1 style={{ height: '70px', borderBottom: '1px solid rgba(255, 255, 255, 0.7)', marginBottom: '20px', marginTop: '10px'}}>Projects</h1>
       <div className={styles.projectsContainer}>
         {projects.map((project, index) => (
-          <FadeInWhenVisible key={index} className={styles.projectBubble} threshold={0.4}>
+          <div key={index} className={styles.projectBubble} threshold={0.4}>
             <h2>{project[TITLE]}</h2>
             <p style={{marginBottom : '10px'}}>{project[YEAR]}</p>
             <div className={styles.project}>
@@ -24,7 +24,7 @@ export default function Skills({ mobile = false }) {
             <p style={{ whiteSpace: 'pre-wrap'}}>{project[DESCRIPTION]}</p>
           {project[SKILLS]}
           <a className={styles.projectLearnMore} href={project[LINK]}><div>Learn More</div></a>
-          </FadeInWhenVisible>
+          </div>
         ))}
       </div>
      </FadeInWhenVisible>
