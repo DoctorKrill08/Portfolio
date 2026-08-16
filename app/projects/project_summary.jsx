@@ -12,10 +12,12 @@ import projectStyles from './projects.module.css';
   export const YEAR = 'year'
 
   export const UFG = 0
-  export const SOAR = 1
-  export const FURY = 2
-  export const AWARE = 3
-  export const MOM = 4
+  export const MECH_NEST = 1
+  export const SOAR = 2
+  export const ECGR = 3
+  export const FURY = 4
+  export const AWARE = 5
+  export const MOM = 6
 
   export const NAME = 'NAME'
 
@@ -32,6 +34,23 @@ import projectStyles from './projects.module.css';
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.LUA} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.GAME_DEVELOPEMENT} type={skills.OTHER} />
+        </div>
+        </div>
+    }
+  projects[MECH_NEST] = {
+      [NAME]: 'MECH_NEST',
+      [LINK]: '/mech-nest',
+      [YEAR]: 'November of 2024 to January of 2025',
+      [DESCRIPTION]: 'My first website! Mech-Nest is a CAD repository of robots from various different FTC and FRC teams from various different years. This project was made for team #10195 Night Owls and the website has been fully transfered to the team.',
+      [TITLE]: 'Mech-Nest',
+      [IMAGE]: '/images/mechnest_logo.webp',
+      [SKILLS]: <div className={skillStyle.projectSkills}>
+        <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
+        <div className={skillStyle.skillBox}>
+          <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.REACT} type={skills.FRAMEWORKS} />
         </div>
         </div>
     }
@@ -62,7 +81,24 @@ import projectStyles from './projects.module.css';
         </div>
         </div>
     }
-  projects[FURY] = {
+  projects[ECGR] = {
+      [NAME]: 'ECGR',
+      [LINK]: '/ecgr',
+      [YEAR]: 'Summer of 2025',
+      [DESCRIPTION]: 'Created generic team pages for all the ECG Robotics Teams, then created a detailed Team #10195 Night Owls Team page. Finally, created a ECG Robotics club blog page.',
+      [TITLE]: 'ECGR Team Page & Blog',
+      [IMAGE]: '/images/ecgr_logo.webp',
+      [SKILLS]: <div className={skillStyle.projectSkills}>
+        <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
+        <div className={skillStyle.skillBox}>
+          <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.REACT} type={skills.FRAMEWORKS} />
+        </div>
+        </div>
+    }
+projects[FURY] = {
       [NAME]: 'FURY',
       [LINK]: '/fury',
       [YEAR]: 'January of 2025 to June of 2026',
