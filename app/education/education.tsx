@@ -12,7 +12,14 @@ export default function Education() {
             <h2>University of North Carolina at Chapel Hill</h2>
             <i>First Year (Fall 2026)</i>
             <div className={education.educationItemContainer}>
-              <p style={{ width: '100%' }}>Description TBA</p>
+            <h2 style={{ width: '100%' }}>Relevant Courses</h2>
+            <ul>
+            <li>COMP 210 - Analysis of Data Structures</li>
+            <li>COMP 283 - Discrete Structures</li>
+            <li>STOR 305 - Intro Decision Analytics</li>
+            <li>MATH 233 - Multi Vari Calc 1 (Calc 3)</li>
+            <li>APPL 101 - Intro to Engineering</li>
+            </ul>
             </div>
           </div>
           <div className={education.educationItem} style={{backgroundColor: 'transparent',boxShadow: '0 0 4px rgba(23, 133, 53, 1)'}}>
