@@ -15,7 +15,7 @@ export default function Education() {
             <h2 style={{ width: '100%' }}>Relevant Courses</h2>
             <ul>
             <li>COMP 210 - Analysis of Data Structures</li>
-            <li>COMP 283 - Discrete Structures</li>
+            <li>MATH 381 - Discrete Mathematics</li>
             <li>STOR 305 - Intro Decision Analytics</li>
             <li>MATH 233 - Multi Vari Calc 1 (Calc 3)</li>
             <li>APPL 101 - Intro to Engineering</li>
