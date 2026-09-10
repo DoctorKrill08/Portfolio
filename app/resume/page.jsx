@@ -18,11 +18,11 @@ export default function Resume() {
         <p>
           Click on the button below to download my resume
         </p>
-        <a className={projectStyles.projectLearnMore} style={{ width: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }} href={'/images/Resume.pdf'}>
+        <a className={projectStyles.projectLearnMore} style={{ width: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }} href={'/images/EthanKimResume.pdf'}>
           <p>Click Here</p>
           <img style={{height: '34px'}} src={'/images/download.webp'} alt="download" />
         </a>
-        <img style={{ maxHeight: '500px' }} src={'/images/Resume.webp'} alt="resume" />
+        <img style={{ maxHeight: '500px' }} src={'/images/EthanKimResume.png'} alt="resume" />
         <h1>
           Associates in Arts from Guilford Technical Community College
         </h1>
