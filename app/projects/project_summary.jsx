@@ -18,6 +18,7 @@ import projectStyles from './projects.module.css';
   export const FURY = 4
   export const AWARE = 5
   export const MOM = 6
+  export const VISION_DRONE = 7
 
   export const NAME = 'NAME'
 
@@ -140,6 +141,7 @@ projects[FURY] = {
         <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.C} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.TYPESCRIPT} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} />
@@ -152,7 +154,7 @@ projects[FURY] = {
 
         <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
         <div className={skillStyle.skillBox}>
-          <SkillIcon skill={skills.JETSON_NANO} type={skills.HARDWARE} />
+          <SkillIcon skill={skills.NVIDIA_JETSON} type={skills.HARDWARE} />
           <SkillIcon skill={skills.ARDUINO} type={skills.HARDWARE} />
           <SkillIcon skill={skills.DEPTH_CAMERA} type={skills.HARDWARE} />
           <SkillIcon skill={skills.LIDAR} type={skills.HARDWARE} />
@@ -184,6 +186,7 @@ projects[FURY] = {
         <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
         <div className={skillStyle.skillBox}>
           <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} />
+          <SkillIcon skill={skills.C} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.HTML} type={skills.LANGUAGES} />
           <SkillIcon skill={skills.CSS} type={skills.LANGUAGES} />
@@ -194,7 +197,7 @@ projects[FURY] = {
 
         <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
         <div className={skillStyle.skillBox}>
-          <SkillIcon skill={skills.JETSON_NANO} type={skills.HARDWARE} />
+          <SkillIcon skill={skills.NVIDIA_JETSON} type={skills.HARDWARE} />
            <SkillIcon skill={skills.ARDUINO} type={skills.HARDWARE} />
           <SkillIcon skill={skills.DEPTH_CAMERA} type={skills.HARDWARE} />
         </div>
@@ -205,6 +208,43 @@ projects[FURY] = {
           <SkillIcon skill={skills.APRIL_TAGS} type={skills.OTHER} />
         </div>
         </div>
+    }
+    projects[VISION_DRONE] = {
+      [NAME]: 'VISION_DRONE',
+      [LINK]: '/vision_drone',
+      [YEAR]: 'Fall of 2026 to PRESENT',
+      [DESCRIPTION]: 'I am currently working with AI@UNC to develop a vision based autonomous drone. This drone is intended to use a JEPA based architecture to predict future states accruately with minimal error propogation, while implementing vision to navigate autonomously in a gps denied environment.',
+      [TITLE]: 'Vision Based Autonomous Drone',
+      [IMAGE]: '/images/VisionDrone.png',
+      [SKILLS]: <div className={skillStyle.projectSkills}>
+        <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
+        <div className={skillStyle.skillBox}>
+            <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} />
+            <SkillIcon skill={skills.C} type={skills.LANGUAGES} />
+
+            <SkillIcon skill={skills.OPENCV} type={skills.FRAMEWORKS} />
+            <SkillIcon skill={skills.PYTORCH} type={skills.FRAMEWORKS} />
+            <SkillIcon skill={skills.PROJECT_AIR_SIM} type={skills.FRAMEWORKS} />
+          </div>
+          <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
+          <div className={skillStyle.skillBox}>
+            <SkillIcon skill={skills.NVIDIA_JETSON} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.FLIGHT_CONTROLLER} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.WEBCAM} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.GPS} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.IMU} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.RADIO} type={skills.HARDWARE} />
+          </div>  
+
+          <div className={skillStyle.projectSkillTitle}><h2>Abilities</h2></div>
+          <div className={skillStyle.skillBox}>
+            <SkillIcon skill={skills.LOCALIZATION} type={skills.OTHER} />
+            <SkillIcon skill={skills.SENSOR_FUSION} type={skills.OTHER} />
+            <SkillIcon skill={skills.PATHING} type={skills.OTHER} />
+            <SkillIcon skill={skills.JEPA_WORLD_MODEL} type={skills.OTHER} />
+
+          </div>
+      </div>
     }
 
   export const projectLength = Object.keys(projects).length

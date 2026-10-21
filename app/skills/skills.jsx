@@ -14,6 +14,7 @@ export default function Skills() {
       <div className={styles.skillBox}>
         <SkillIcon skill={skills.JAVA} type={skills.LANGUAGES} small={false}/>
         <SkillIcon skill={skills.PYTHON} type={skills.LANGUAGES} small={false} />
+        <SkillIcon skill={skills.C} type={skills.LANGUAGES} small={false} />
         <SkillIcon skill={skills.LUA} type={skills.LANGUAGES} small={false}/>
         <SkillIcon skill={skills.TYPESCRIPT} type={skills.LANGUAGES} small={false}/>
         <SkillIcon skill={skills.JAVASCRIPT} type={skills.LANGUAGES} small={false}/>
@@ -31,6 +32,7 @@ export default function Skills() {
         <SkillIcon skill={skills.REACT} type={skills.FRAMEWORKS} small={false}/>
         <SkillIcon skill={skills.OPENCV} type={skills.FRAMEWORKS} small={false}/>
         <SkillIcon skill={skills.YOLO} type={skills.FRAMEWORKS} small={false}/>
+        <SkillIcon skill={skills.PYTORCH} type={skills.FRAMEWORKS} small={false}/>
       </div>
 
      </FadeInWhenVisible>

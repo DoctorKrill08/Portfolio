@@ -11,6 +11,7 @@ export const JAVASCRIPT = 'JavaScript'
 export const TYPESCRIPT = 'TypeScript'
 export const HTML = 'HTML'
 export const CSS = 'CSS'
+export const C = 'C'
 
 export const REACT = 'React'
 export const FLASK = 'Flask'
@@ -19,6 +20,8 @@ export const WEBSOCKETS = 'WebSockets'
 export const SOCKETIO = 'SocketIO'
 export const OPENCV = 'OpenCV'
 export const YOLO = 'YOLO'
+export const PYTORCH = 'PyTorch'
+export const PROJECT_AIR_SIM = 'Project Air Sim'
 
 export const DEPTH_CAMERA = 'Depth Camera'
 export const LIDAR = 'LIDAR'
@@ -26,9 +29,10 @@ export const WHEELED_ODOMETRY = 'Wheeled Odometry'
 export const WEBCAM = 'Webcam'
 export const GPS = 'GPS'
 export const IMU = 'IMU'
-export const JETSON_NANO = 'Jetson Nano'
+export const NVIDIA_JETSON = 'NVIDIA Jetson'
 export const ARDUINO = 'Arduino'
 export const RADIO = 'Radio'
+export const FLIGHT_CONTROLLER = 'Flight Controller'
 
 export const LOCALIZATION = 'Localization'
 export const CONTROL = 'Control'
@@ -40,6 +44,7 @@ export const APRIL_TAGS = 'April Tags'
 export const AUTONOMOUS = 'Autonomous'
 export const TELEOPERATED = 'Teleoperated'
 export const FPV = 'FPV'
+export const JEPA_WORLD_MODEL = 'JEPA World Model'
 
 
 
@@ -62,7 +67,8 @@ skills[LANGUAGES] = {
   [JAVASCRIPT]: [JAVASCRIPT, yellow, '/images/javascript_logo_white.webp', 0.9],
   [TYPESCRIPT]: [TYPESCRIPT, yellow, '/images/typescript_logo_white.webp', 1.1],
   [HTML]: [HTML, yellow, '/images/html_logo_white.webp', 1],
-  [CSS]: [CSS, yellow, '/images/css_logo_white.webp', 0.8]
+  [CSS]: [CSS, yellow, '/images/css_logo_white.webp', 0.8],
+  [C]: [C, blue, '/images/c_logo.webp', 1],
 }
 skills[FRAMEWORKS] = {
   [FLASK]: [FLASK, blue, '/images/flask_logo_white.webp', 1],
@@ -71,7 +77,9 @@ skills[FRAMEWORKS] = {
   [SOCKETIO]: [SOCKETIO, purple, '/images/socketio_logo_white.webp', 0.9],
   [REACT]: [REACT, yellow, '/images/react_logo_white.svg', 0.9],
   [OPENCV]: [OPENCV, green, '/images/opencv_logo_white.webp', 0.9],
-  [YOLO]: [YOLO, green, '/images/yolo_logo_white.webp', 0.9]
+  [YOLO]: [YOLO, green, '/images/yolo_logo_white.webp', 0.9],
+  [PYTORCH]: [PYTORCH, green, '/images/pytorch_logo.webp', 0.9],
+  [PROJECT_AIR_SIM]: [PROJECT_AIR_SIM, purple, '/images/microsoft_logo.webp', 0.9],
 }
 skills[HARDWARE] = {
   [DEPTH_CAMERA]: [DEPTH_CAMERA, green, null, null],
@@ -81,8 +89,9 @@ skills[HARDWARE] = {
   [IMU]: [IMU, yellow, null, null],
   [GPS]: [GPS, blue, null, null],
   [RADIO]: [RADIO, red, null, null],
-  [JETSON_NANO]: [JETSON_NANO, purple, null, null],
-  [ARDUINO]: [ARDUINO, purple, null, null]
+  [NVIDIA_JETSON]: [NVIDIA_JETSON, purple, null, null],
+  [ARDUINO]: [ARDUINO, purple, null, null],
+  [FLIGHT_CONTROLLER]: [FLIGHT_CONTROLLER, purple, null, null]
 }
 
 skills[OTHER] = {
@@ -93,6 +102,7 @@ skills[OTHER] = {
   [MAPPING]: [MAPPING, purple, null, null],
   [PATHING]: [PATHING, purple, null, null],
   [SENSOR_FUSION]: [SENSOR_FUSION, green, null, null],
+  [JEPA_WORLD_MODEL]: [JEPA_WORLD_MODEL, green, null, null],
 }
 export default function SkillIcon({ skill, type, small = true }) {
 
