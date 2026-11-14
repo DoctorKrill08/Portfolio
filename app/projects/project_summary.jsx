@@ -215,7 +215,7 @@ projects[FURY] = {
       [YEAR]: 'Fall of 2026 to PRESENT',
       [DESCRIPTION]: 'I am currently working with AI@UNC to develop a vision based autonomous drone. This drone is intended to use a JEPA based architecture to predict future states accruately with minimal error propogation, while implementing vision to navigate autonomously in a gps denied environment.',
       [TITLE]: 'Vision Based Autonomous Drone',
-      [IMAGE]: '/images/VisionDrone.png',
+      [IMAGE]: '/images/VisionDrone.webp',
       [SKILLS]: <div className={skillStyle.projectSkills}>
         <div className={skillStyle.projectSkillTitle}><h2>Skills</h2></div>
         <div className={skillStyle.skillBox}>
@@ -225,6 +225,7 @@ projects[FURY] = {
             <SkillIcon skill={skills.OPENCV} type={skills.FRAMEWORKS} />
             <SkillIcon skill={skills.PYTORCH} type={skills.FRAMEWORKS} />
             <SkillIcon skill={skills.PROJECT_AIR_SIM} type={skills.FRAMEWORKS} />
+            <SkillIcon skill={skills.UNREAL_ENGINE} type={skills.FRAMEWORKS} />
           </div>
           <div className={skillStyle.projectSkillTitle}><h2>Hardware</h2></div>
           <div className={skillStyle.skillBox}>

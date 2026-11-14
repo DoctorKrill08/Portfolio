@@ -55,6 +55,31 @@ export default function VisionDrone() {
         </p>
        </FadeInWhenVisible>
 
+       <FadeInWhenVisible className={"bubble"} style={{ marginTop: '20px' }}>
+        <h1>Data Collection</h1>
+        <p>
+            Simply flying with random motor outputs fails to get reliable data for training. Instead, having the drone fly to various random waypoints in random simulation configurations preserves realistic physics and trains the drone on what it really should learn: flight.
+        </p>
+        <p>
+            Since randomized simulation configurations makes the drone fly unreliability with default PID gains, a physics rate gain autotuner is used to take the simulation configurations and turn it into rate PID gains. With effective rate control, the other control modes do not need to be retuned (attitude, velocity, position). 
+        </p>
+
+        <img
+          src="/images/controllers.webp"
+          alt="Control Structure"
+          style={{ maxWidth: "90%", marginTop: "20px" }}
+        />
+        <i style={{marginTop:'10px'}}>
+          Above shows a diagram of the drones control logic, including the auto tuner and various flight modes.
+        </i>
+
+        <i style={{ marginTop: '10px' }}>
+          Below is a button that leads to a youtube video demonstrating the autotuner and control logic.
+        </i>
+
+        <a className={projectStyles.projectLearnMore} href={'https://www.youtube.com/watch?v=E7-F3rcVzWI'}>Click Here</a>
+       </FadeInWhenVisible>
+
       <FadeInWhenVisible className={"bubble"} style={{ marginTop: '20px' }}>
         <h1>JEPA Style Latent State Prediction</h1>
         <i>

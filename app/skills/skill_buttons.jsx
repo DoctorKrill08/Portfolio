@@ -22,6 +22,8 @@ export const OPENCV = 'OpenCV'
 export const YOLO = 'YOLO'
 export const PYTORCH = 'PyTorch'
 export const PROJECT_AIR_SIM = 'Project Air Sim'
+export const UNREAL_ENGINE = 'Unreal Engine'
+
 
 export const DEPTH_CAMERA = 'Depth Camera'
 export const LIDAR = 'LIDAR'
@@ -80,6 +82,8 @@ skills[FRAMEWORKS] = {
   [YOLO]: [YOLO, green, '/images/yolo_logo_white.webp', 0.9],
   [PYTORCH]: [PYTORCH, green, '/images/pytorch_logo.webp', 0.9],
   [PROJECT_AIR_SIM]: [PROJECT_AIR_SIM, purple, '/images/microsoft_logo.webp', 0.9],
+  [UNREAL_ENGINE]: [UNREAL_ENGINE, purple, '/images/Unreal.webp', 1],
+
 }
 skills[HARDWARE] = {
   [DEPTH_CAMERA]: [DEPTH_CAMERA, green, null, null],
