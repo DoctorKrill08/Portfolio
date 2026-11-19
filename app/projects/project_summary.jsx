@@ -231,7 +231,7 @@ projects[FURY] = {
           <div className={skillStyle.skillBox}>
             <SkillIcon skill={skills.NVIDIA_JETSON} type={skills.HARDWARE} />
             <SkillIcon skill={skills.FLIGHT_CONTROLLER} type={skills.HARDWARE} />
-            <SkillIcon skill={skills.WEBCAM} type={skills.HARDWARE} />
+            <SkillIcon skill={skills.DEPTH_CAMERA} type={skills.HARDWARE} />
             <SkillIcon skill={skills.GPS} type={skills.HARDWARE} />
             <SkillIcon skill={skills.IMU} type={skills.HARDWARE} />
             <SkillIcon skill={skills.RADIO} type={skills.HARDWARE} />
